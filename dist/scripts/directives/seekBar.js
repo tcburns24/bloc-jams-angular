@@ -9,7 +9,7 @@
             return offsetXPercent;
         };
     
-        return {
+        return { 
             templateUrl: '/templates/directives/seek_bar.html',
             replace: true,
             restrict: 'E',
@@ -29,6 +29,10 @@
                 
                 scope.fillStyle = function() {
                     return {width: percentString()};
+                };
+                
+                scope.thumbStyle = function() {
+                    return {left: percentString()};
                 };
                 
                 scope.onClickSeekBar = function(event) {

@@ -6,7 +6,7 @@
                 requireBase: false
             });
         
-        $stateProvider
+        $stateProvider 
             .state('landing', {
                 url: '/',
                 controller: 'LandingCtrl as landing',
