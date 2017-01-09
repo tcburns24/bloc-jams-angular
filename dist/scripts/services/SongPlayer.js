@@ -39,6 +39,7 @@
             });
             
             SongPlayer.currentSong = song;
+            
         };
         
         var stopSong = function(song) {
@@ -59,6 +60,15 @@
         * @type {Number}
         */
         SongPlayer.currentTime = null;
+    
+        SongPlayer.volume = 80;
+        
+        SongPlayer.setVolume = function(volume){
+            if (currentBuzzObject) {
+                currentBuzzObject.setVolume(volume);
+            }
+            SongPlayer.volume = volume;
+        }
         
         SongPlayer.play = function(song) {
             song = song || SongPlayer.currentSong;
